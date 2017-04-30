@@ -14,7 +14,7 @@
         try {
         	$conexao = Conecta::abrir();
         	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
-        	$sql = "DELETE FROM customers  WHERE id = ?";
+        	$sql = "DELETE FROM meuslivros WHERE id = ?";
         	$query = $conexao->prepare($sql);
         	$query->execute(array($id));
         	Conecta::fechar();
