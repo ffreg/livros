@@ -31,7 +31,7 @@
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
         	}
-            header("Location: status.php");
+            header("Location: status.php?nome=" . $name);
         }
     }
 ?>
