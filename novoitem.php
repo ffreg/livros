@@ -29,7 +29,7 @@
             $sql = "INSERT INTO novolivro (NOME) values(?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($name));
-            Conecta:fechar();
+            Conecta::fechar();
             header("Location: grid.php");
         }
     }
