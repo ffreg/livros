@@ -38,19 +38,19 @@
 		echo "
 		<div> 
 			Detalhes do Livro
-		</div>";
-		echo "<div>";
-		echo "<label>Name</label>";
-		echo "</div>";
-		echo "<div>";
-		echo "<label>" . $dados['NOME'] . "</label>";
-		echo "</div>";
-		echo "<div>";
-		echo "<label>ID</label>";
-		echo "</div>";
-		echo "<div>";
-		echo "	<label>" . $dados['ID'] . "</label>";
-		echo "</div>";	
+		</div>
+		<div>
+		<label>Name</label>
+		</div>
+		<div>
+		<label>" . $dados['NOME'] . "</label>
+		</div>
+		<div>
+		<label>ID</label>
+		</div>
+		<div>
+			<label>" . $dados['ID'] . "</label>
+		</div>";	
 	}
 
 ?>
