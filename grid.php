@@ -8,6 +8,11 @@
                 <h3>Grid - Meus Livros</h3>
             </div>
             <div>
+            	<p>
+                    <a href="novoitem.php">Novo Livro</a>
+                </p>
+            </div> 
+            <div>
                 <table border=1 width="50%">
                     <tr>
                       <td>ID</td>
