@@ -11,18 +11,18 @@
         $id = $_POST['id'];
          
         // Apaga o registro
-//        try {
-//        	$conexao = Conecta::abrir();
-//        	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
-//        	$sql = "DELETE FROM customers  WHERE id = ?";
-//        	$query = $conexao->prepare($sql);
-//        	$query->execute(array($id));
-//        	Conecta::fechar();
-//		}  catch(PDOException $e) {
+        try {
+        	$conexao = Conecta::abrir();
+        	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
+        	$sql = "DELETE FROM customers  WHERE id = ?";
+        	$query = $conexao->prepare($sql);
+        	$query->execute(array($id));
+        	Conecta::fechar();
+		}  catch(PDOException $e) {
 				// Se ocorrer erro, apresentar e parar a app 
-//				die($e->getMessage()); 
-//        }
-//		header("Location: grid.php");  
+				die($e->getMessage()); 
+        }
+		header("Location: grid.php");  
 	 } else { 
     	// Ler os dados do livro para apresentar ao usuario antes da acao
     	try { 
@@ -55,45 +55,24 @@
 		// Caso o usuario altera o parametro de chamada URL para algo invalido  
 		// exemplo: ?id=090990989
 		echo "Livro não encontrado ! - Verificar o ID utilizado como parametro !"; 
-	} else {
-		echo "
-		<div> 
-			Detalhes do Livro
-		</div>
-		<div>
-		<label>Name</label>
-		</div>
-		<div>
-		<label>" . $dados['NOME'] . "</label>
-		</div>
-		<div>
-		<label>ID</label>
-		</div>
-		<div>
-			<label>" . $dados['ID'] . "</label>
-		</div>";	
-	}
+	} 
 ?>
-
     <div>
-     
-                <div>
-                    <div>
-                        <h3>Apagar um Livro<h3>
-                    </div>
-                </div> 
-                <div>      
-                    <form action="aoagaritem.php" method="post">
-                      <input type="hidden" name="id" value="<?php echo $id;?>"/>
-                      <p style="color:red;">Tem certeza que deseja apagar o Livro <?php echo "'". $dados['NOME'] . "' - ID: " . $dados['ID']   ?> ?</p>
-                      <div class="form-actions">
-                          <button type="submit">Sim</button>
-                          <a href="grid.php">Não - Voltar para o Grid</a>
-                      </div>
-                    </form>
+     	<div>
+     		<div>
+            	<h3 STYLE="color::blue;">Apagar um Livro<h3>
+            </div>
+        </div> 
+    	<div>      
+            <form action="aoagaritem.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $id;?>"/>
+                <p style="color:red;">Tem certeza que deseja apagar o Livro <?php echo "'". $dados['NOME'] . "' - ID: " . $dados['ID']   ?> ?</p>
+                <div class="form-actions">
+                    <button type="submit">Sim</button>
+                    <a href="grid.php">Não - Voltar para o Grid</a>
                 </div>
-                 
+            </form>
+        </div> 
     </div>
-
   </body>
 </html>
