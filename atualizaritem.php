@@ -43,11 +43,11 @@
     		try { 
     			$conexao = Conecta::abrir();
 		        $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        		$sql = "SELECT * FROM meuslivros where id = ?";
+        		$sql = "SELECT ID,NOME FROM meuslivros where id = ?";
         		$query = $conexao->prepare($sql);
         		$query->execute(array($id));
         		$dados = $query->fetch(PDO::FETCH_ASSOC);
-        		$name = $dados['name'];
+        		$name = $dados['NOME'];
         		Conecta::fechar();
         	} catch(PDOException $e) {
 				// Se ocorrer erro, apresentar e parar a app 
