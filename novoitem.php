@@ -22,7 +22,7 @@
             $pdo = Conecta::abrir();
             try {
             	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            	$sql = "INSERT INTO novolivro (NOME) values (?)";
+            	$sql = "INSERT INTO meuslivros (NOME) values (?)";
             	$q = $pdo->prepare($sql);
             	$q->execute(array($name));
             	Conecta::fechar();
