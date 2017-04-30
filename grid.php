@@ -17,6 +17,7 @@
                     <tr>
                       <td>ID</td>
                       <td>Nome do Livro</td>
+                      <td>Opcoes</td>
                     </tr>
                   <?php
                    include 'conecta.php';
@@ -27,6 +28,7 @@
                             echo '<tr>';
                             echo '<td>' . $row[ID] . '</td>';
                             echo '<td>' . $row[NOME] . '</td>';
+                            echo '<td>' . <a href="leritem.php?id='.$row[ID].'">Detalhes</a> 
                             echo '</tr>';
                    }
                    Conecta::fechar();
