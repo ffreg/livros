@@ -2,31 +2,28 @@
 	<head>
 		<title>Grid</title> 
 	</head>
-	<body>
-	
-	   <div class="container">
-            <div class="row">
-                <h3>PHP CRUD Grid</h3>
+	<body>	
+	   <div>
+            <div >
+                <h3>Grid - Meus Livros</h3>
             </div>
-            <div class="row">
-                <table class="table table-striped table-bordered">
+            <div>
+                <table >
                     <tr>
-                      <th>Name</th>
-                      <th>Email Address</th>
-                      <th>Mobile Number</th>
+                      <td>ID</td>
+                      <td>Nome do Livro</td>
                     </tr>
                   <?php
                    include 'conecta.php';
-                   $pdo = Conecta::abreconexao();
+                   $pdo = Conecta::abre();
                    $sql = 'SELECT * FROM meuslivros ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
-                            echo '<td>'. $row['name'] . '</td>';
-                            echo '<td>'. $row['email'] . '</td>';
-                            echo '<td>'. $row['mobile'] . '</td>';
+                            echo '<td>'. $row['ID'] . '</td>';
+                            echo '<td>'. $row['Nome'] . '</td>';
                             echo '</tr>';
                    }
-                   Conecta::fechaconexao();
+                   Conecta::fecha();
                   ?>
             </table>
         </div>
