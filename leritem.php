@@ -41,7 +41,7 @@
     				<label>Name</label>
     			</div>
     			<div>
-    				<label><?php echo $data['nome'];?></label>
+    				<label><?php echo $dados['nome'];?></label>
     			</div>
             </div>
         </div>
