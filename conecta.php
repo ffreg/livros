@@ -21,7 +21,8 @@ class Conecta
        {     
         try
         {
-          self::$cont =  new PDO( "sqlsrv::host=".self::$dbServidor.";"."dbname=".self::$dbNome, self::$dbUsuario, self::$dbSenha); 
+          self::$cont =  new PDO( "sqlsrv:Server=".self::$dbServidor.";"."dbname=".self::$dbNome, self::$dbUsuario, self::$dbSenha); 
+          // se fosse uma conexao com o MySQL a string de conexao seria: mysql:host ao inves de sqlsrv:Server=
         }
         catch(PDOException $e)
         {
