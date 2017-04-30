@@ -35,21 +35,22 @@
 	if ( count($dados) == 1 )  { 
 		echo "Livro não encontrado ! - Verificar o ID utilizado como parametro !"; 
 	} else {
+		echo "
+		<div> 
+			Detalhes do Livro
+		</div>";
 		echo "<div>" 
-		echo "Detalhes do Livro"	
-		echo "</div>"
-		echo "<div>" 
-		echo "<label>Name</label>"
-		echo "</div>"
-		echo "<div>"  
-		echo "<label>" . $dados['NOME'] . "</label>"
-		echo "</div>" 
-		echo "<div>" 
-		echo "<label>ID</label>"
-		echo "</div>"
-		echo "<div>"  
-		echo "	<label><?php echo $dados['ID'];?></label>"
-		echo "</div>" 	
+		echo "<label>Name</label>";
+		echo "</div>";
+		echo "<div>";
+		echo "<label>" . $dados['NOME'] . "</label>";
+		echo "</div>";
+		echo "<div>";
+		echo "<label>ID</label>";
+		echo "</div>";
+		echo "<div>";
+		echo "	<label>" . $dados['ID'] . "</label>";
+		echo "</div>";	
 	}
 
 ?>
