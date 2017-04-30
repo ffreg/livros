@@ -32,27 +32,27 @@
  
 <body>
 <?php 
-	echo "Status ....: " . count($dados);
 	if ( count($dados) == 1 )  { 
-		echo "Livro não encontrado ! - Verificar parametro e acesso !"; 
+		echo "Livro não encontrado ! - Verificar o ID utilizado como parametro !"; 
+	} else {
+		echo "<div>" 
+		echo "Detalhes do Livro"	
+		echo "</div>"
+		echo "<div>" 
+		echo "<label>Name</label>"
+		echo "</div>"
+		echo "<div>"  
+		echo "<label>" . $dados['NOME'] . "</label>"
+		echo "</div>" 
+		echo "<div>" 
+		echo "<label>ID</label>"
+		echo "</div>"
+		echo "<div>"  
+		echo "	<label><?php echo $dados['ID'];?></label>"
+		echo "</div>" 	
 	}
 
 ?>
-	<div> 
-		Detalhes do Livro	
-	</div> 
-	<div> 
-		<label>Name</label>
-	</div>
-	<div>  
-		<label><?php echo $dados['NOME'];?></label>
-	</div> 
-	<div> 
-		<label>ID</label>
-	</div>
-	<div>  
-		<label><?php echo $dados['ID'];?></label>
-	</div> 
 	<div> 
 		<a href="grid.php">Voltar para o Grid</a>
 	</div>
