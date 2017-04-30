@@ -33,6 +33,8 @@
 <body>
 <?php 
 	if ( count($dados) == 1 )  { 
+		// Caso o usuario altera o parametro de chamada URL para algo invalido  
+		// exemplo: ?id=090990989
 		echo "Livro não encontrado ! - Verificar o ID utilizado como parametro !"; 
 	} else {
 		echo "

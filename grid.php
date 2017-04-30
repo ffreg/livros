@@ -31,6 +31,8 @@
                             echo '<td>' . $row[ID] . '</td>';
                             echo '<td>' . $row[NOME] . '</td>';
                             echo '<td><a href="leritem.php?id='.$row[ID].'">Detalhes</a></td>';
+                            echo '<td><a href="atualizaritem.php?id='.$row[ID].'">Atualizar</a></td>';
+                            echo '<td><a color=red href="apagaritem.php?id='.$row[ID].'">Apagar<a></td>';
                             echo '</tr>';
                    }
                    Conecta::fechar();
