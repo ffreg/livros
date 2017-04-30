@@ -32,12 +32,17 @@
 </head>
  
 <body>
-
-
-<?php echo "Passei por aqui";  ?> 
-Detalhes do Livro </br>
-<label>Name</label> </br> 
-<label><?php echo $dados['nome'];?></label></br>
-<a href="grid.php">Back</a>
+	<div> 
+		Detalhes do Livro	
+	</div> 
+	<div> 
+		<label>Name</label>
+	</div>
+	<div>  
+		<label><?php echo $dados['NOME'];?></label>
+	</div> 
+	<div> 
+		<a href="grid.php">Voltar para o Grid</a>
+	</div>
   </body>
 </html>
