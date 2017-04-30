@@ -28,7 +28,7 @@
                             echo '<tr>';
                             echo '<td>' . $row[ID] . '</td>';
                             echo '<td>' . $row[NOME] . '</td>';
-                            echo '<td>' . <a href="leritem.php?id='.$row[ID].'">Detalhes</a> 
+                            echo '<td><a href="leritem.php?id='.$row[ID].'">Detalhes</a></td>'
                             echo '</tr>';
                    }
                    Conecta::fechar();
