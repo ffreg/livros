@@ -23,7 +23,7 @@
 //				die($e->getMessage()); 
 //        }
 //		header("Location: grid.php");  
-//    } else { 
+	 } else { 
     	// Ler os dados do livro para apresentar ao usuario antes da acao
     	try { 
     		$conexao = Conecta::abrir();
