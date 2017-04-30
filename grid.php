@@ -20,7 +20,7 @@
                    $query->execute();
                    
                    // $sql = 'SELECT id,nome FROM meuslivros';
-                   for($i; $row = $query->fetch(); $i++){ {
+                   for($i=0; $row = $query->fetch(); $i++){ {
                             echo '<tr>';
                             echo '<td>' . $i . "-" . $row[ID] . '</td>';
                             echo '<td>' . $row[NOME] . '</td>';
