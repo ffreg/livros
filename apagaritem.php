@@ -66,7 +66,7 @@
     	<div>      
             <form action="apagaritem.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $id;?>"/>
-                <p style="color:red;">Tem certeza que deseja apagar o Livro <?php echo "'". $dados['NOME'] . "' - ID: " . $dados['ID']   ?> ?</p>
+                <p style="color:red;">Tem certeza que deseja apagar o Livro <?php echo "'". $dados['NOME'] . "' que tem o ID: " . $dados['ID']   ?> ?</p>
                 <div class="form-actions">
                     <button type="submit">Sim</button>
                     <a href="grid.php">Não - Voltar para o Grid</a>
