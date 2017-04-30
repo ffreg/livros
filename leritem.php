@@ -7,8 +7,7 @@
      
     if ( null==$id ) {
         header("Location: grid.php");
-    } 
-    else {
+    } else {
     	try { 
     		$conexao = Conecta::abrir();
         	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -23,10 +22,10 @@
 				die($e->getMessage()); 
 		}
 		$status = true;
-		if ( count($dados) = 0 ) {
+		// if ( count($dados) = 0 ) {
 			// nenhum item localizado 
-			$status = false; 
-		}
+		//	$status = false; 
+		// }
     }
 ?>
  
@@ -38,7 +37,7 @@
  
 <body>
 <?php 
-	if (! $status) { 
+	if (!$status) { 
 		echo "Livro não encontrado ! - Verificar parametro e acesso !"; 
 	}
 
