@@ -11,7 +11,7 @@
             </div>
              
                     <form action="novoitem.php" method="post">
-                      <div <?php echo !empty($nameError)?'erro':'';?>">
+                      <div">
                         <label>Nome</label>
                         <div>
                             <input name="nome" type="text"  placeholder="Nome" value="<?php echo !empty($name)?$name:'';?>">
@@ -22,7 +22,7 @@
                       </div>
                       <div>
                           <button type="submit">Gravar</button>
-                          <a class="btn" href="grid.php">Voltar</a>
+                          <a href="grid.php">Voltar</a>
                         </div>
                     </form>
                 </div>
