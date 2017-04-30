@@ -29,7 +29,7 @@
         	try {
 				$conexao = Conecta::abrir();
             	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            	$sql = "UPDATE meuslivros set name = ? WHERE id = ?";
+            	$sql = "UPDATE meuslivros set NOME = ? WHERE id = ?";
             	$query = $conexao->prepare($sql);
             	$query->execute(array($name,$id));
             	Conecta::fechar();
