@@ -22,6 +22,10 @@
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
 		}
+		if ( count($dados) = 0 ) {
+			// nenhum item localizado 
+			$status = true; 
+		}
     }
 ?>
  
@@ -32,6 +36,12 @@
 </head>
  
 <body>
+<?php 
+	if (! status) { 
+		echo "Livro não encontrado ! - Verificar parametro e acesso !"; 
+	}
+
+?>
 	<div> 
 		Detalhes do Livro	
 	</div> 
@@ -47,8 +57,6 @@
 	<div>  
 		<label><?php echo $dados['ID'];?></label>
 	</div> 
-
-
 	<div> 
 		<a href="grid.php">Voltar para o Grid</a>
 	</div>
