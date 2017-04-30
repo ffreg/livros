@@ -31,21 +31,10 @@
 </head>
  
 <body>
-    <div>
-    	<div>
-    		<div>
-    			<h3>Detalhes do Livro</h3>
-    		</div>
-    		<div>
-    			<div>
-    				<label>Name</label>
-    			</div>
-    			<div>
-    				<label><?php echo $dados['nome'];?></label>
-    			</div>
-            </div>
-        </div>
-        <div><a href="grid.php">Back</a></div> 
-    </div>
+<?php echo "Passei por aqui";  ?> 
+Detalhes do Livro </br>
+<label>Name</label> </br> 
+<label><?php echo $dados['nome'];?></label></br>
+<a href="grid.php">Back</a>
   </body>
 </html>
