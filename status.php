@@ -5,9 +5,9 @@
 </head>
 <body>
 	<div> 
-		<?php>
-			echo "Novo livro '" . $name. "'foi gravado com sucesso!"
-		<?>
+		<?php
+			echo "Novo livro " . $name. "foi gravado com sucesso!";
+		?>
 		<a href="grid.php">Voltar</a> 
 	</div>  
 </body>
