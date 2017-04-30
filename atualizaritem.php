@@ -15,7 +15,7 @@
         $nameError = null;
 
         // 
-        $name = $_POST['name'];
+        $name = $_POST['nome'];
 
         // 
         $valid = true;
