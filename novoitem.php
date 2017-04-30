@@ -23,7 +23,7 @@
                 $conexao = Conecta::abrir();
             	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             	$sql = "INSERT INTO meuslivros (NOME) values (?)";
-            	$query = $pdo->prepare($sql);
+            	$query = $conexao->prepare($sql);
             	$query->execute(array($name));
             	Conecta::fechar();
             }
