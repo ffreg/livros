@@ -22,10 +22,10 @@
 				die($e->getMessage()); 
 		}
 		$status = true;
-		// if ( count($dados) = 0 ) {
+		if ( count($dados) == 0 ) {
 			// nenhum item localizado 
-		//	$status = false; 
-		// }
+			$status = false; 
+		}
     }
 ?>
  
@@ -37,7 +37,7 @@
  
 <body>
 <?php 
-	if ($status) { 
+	if (!$status) { 
 		echo "Livro não encontrado ! - Verificar parametro e acesso !"; 
 	}
 
