@@ -39,7 +39,7 @@
 		<div> 
 			Detalhes do Livro
 		</div>";
-		echo "<div>" 
+		echo "<div>";
 		echo "<label>Name</label>";
 		echo "</div>";
 		echo "<div>";
