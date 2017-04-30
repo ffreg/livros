@@ -10,3 +10,5 @@
 		<?>
 		<a href="grid.php">Voltar</a> 
 	</div>  
+</body>
+<html> 
