@@ -38,7 +38,7 @@
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
 		}
-    	
+ 	}	   	
 ?>
  
 <!DOCTYPE html>
