@@ -19,7 +19,7 @@
                     <tr>
                       <td>ID</td>
                       <td>Nome do Livro</td>
-                      <td>Opcoes</td>
+                      <td colspan=3 algin=center>Opcoes</td>
                     </tr>
                   <?php
                    include 'conecta.php';
