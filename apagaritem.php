@@ -85,7 +85,7 @@
                 <div>      
                     <form action="aoagaritem.php" method="post">
                       <input type="hidden" name="id" value="<?php echo $id;?>"/>
-                      <p color=red>Tem certeza que deseja apagar este Livro '<?php $dados['ID'] ?>' ?</p>
+                      <p color=red>Tem certeza que deseja apagar este Livro '<?php echo $dados['NOME'] ?>' ?</p>
                       <div class="form-actions">
                           <button type="submit">Sim</button>
                           <a href="grid.php">Não - Voltar para o Grid</a>
