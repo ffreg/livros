@@ -31,8 +31,8 @@
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
         	}
-            // echo "Gravado..." . $name
-            // header("Location: grid.php");
+            echo "<script type='text/javascript'>alert('submitted successfully!')</script>";
+            header("Location: grid.php");
         }
     }
 ?>
