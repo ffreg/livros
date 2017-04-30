@@ -8,7 +8,7 @@
                 <h3>Grid - Meus Livros</h3>
             </div>
             <div>
-                <table >
+                <table border=1 >
                     <tr>
                       <td>ID</td>
                       <td>Nome do Livro</td>
@@ -16,6 +16,7 @@
                   <?php
                    include 'conecta.php';
                    $pdo = Conecta::abrir();
+                   echo '<tr><td colspan=2>Conectou ...</td></tr>';
                    $sql = 'SELECT * FROM meuslivros ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
