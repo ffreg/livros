@@ -2,7 +2,7 @@
     require 'conecta.php';
     $id = null;
     if ( !empty($_GET['id'])) {
-        $id = $_GET['id'];
+        $id = $_REQUEST['id'];
     }
      
     if ( null==$id ) {
@@ -12,7 +12,7 @@
     	try { 
     		$conexao = Conecta::abrir();
         	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        	$sql = "SELECT ID,NOME FROM meuslivros where id = ?";
+        	$sql = "SELECT ID,NOME FROM meuslivros where ID = ?";
         	$query = $conexao->prepare($sql);
         	$query->execute(array($id));
         	$dados = $query->fetch(PDO::FETCH_ASSOC);
