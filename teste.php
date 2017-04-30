@@ -15,7 +15,7 @@
 	   	 	$conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
 	    	$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
  
-		    $sqlQuery = $conn->query("SELECT * FROM [TABLE_NAME]");
+		    $sqlQuery = $conn->query("SELECT * FROM meuslivros");
 			$result = $sqlQuery->fetchAll();
 			echo "Row count: " . count($result) . ".";
 		}
