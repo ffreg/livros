@@ -21,6 +21,7 @@
 		catch (PDOException $e) {
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
+		}
     }
 ?>
  
@@ -31,6 +32,8 @@
 </head>
  
 <body>
+
+
 <?php echo "Passei por aqui";  ?> 
 Detalhes do Livro </br>
 <label>Name</label> </br> 
