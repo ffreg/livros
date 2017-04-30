@@ -26,12 +26,11 @@
             	$query = $conexao->prepare($sql);
             	$query->execute(array($name));
             	Conecta::fechar();
-            }
-            catch(PDOException $e) {
+            } catch(PDOException $e) {
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
         	}
-            header("Location: status.php?nome=" . $name);
+            header("Location: status.php?nome=" . $name . "&stat=N");
         }
     }
 ?>
