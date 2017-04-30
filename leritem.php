@@ -42,6 +42,14 @@
 		<label><?php echo $dados['NOME'];?></label>
 	</div> 
 	<div> 
+		<label>ID</label>
+	</div>
+	<div>  
+		<label><?php echo $dados['ID'];?></label>
+	</div> 
+
+
+	<div> 
 		<a href="grid.php">Voltar para o Grid</a>
 	</div>
   </body>
