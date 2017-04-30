@@ -37,6 +37,7 @@
  
 <body>
 <?php 
+	echo "Status ....: ".$status;
 	if (!$status) { 
 		echo "Livro não encontrado ! - Verificar parametro e acesso !"; 
 	}
