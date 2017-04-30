@@ -15,13 +15,13 @@
                     </tr>
                   <?php
                    include 'conecta.php';
-                   $pdo = Conecta::abrir();
+                   $conexao = Conecta::abrir();
                    echo '<tr><td colspan=2>Conectou ...</td></tr>';
                    $sql = 'SELECT * FROM meuslivros ORDER BY id DESC';
-                   foreach ($pdo->query($sql) as $row) {
+                   foreach ($conexao->query($sql) as $row) {
                             echo '<tr>';
-                            echo '<td>'. $row['ID'] . '</td>';
-                            echo '<td>'. $row['Nome'] . '</td>';
+                            echo '<td>' . $row[ID] . '</td>';
+                            echo '<td>' . $row[NOME] . '</td>';
                             echo '</tr>';
                    }
                    Conecta::fechar();
