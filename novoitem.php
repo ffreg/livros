@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-</head>
-
 <?php
      
     require 'conecta.php';
@@ -26,7 +20,7 @@
         if ($valid) {
             $pdo = Conecta::abrir();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO novolivro (NOME) values(?)";
+            $sql = "INSERT INTO novolivro (NOME) values (?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($name));
             Conecta::fechar();
@@ -35,7 +29,11 @@
     }
 ?>
 
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
 <body>
     <div>
 		<div>
