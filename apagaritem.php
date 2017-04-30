@@ -22,7 +22,7 @@
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
         }
-		header("Location: status.php?nome=" . $name . "&stat=D");  
+		header("Location: grid.php");  
     } else { 
     	// Ler os dados do livro para apresentar ao usuario antes da acao
     	try { 
@@ -71,7 +71,6 @@
 			<label>" . $dados['ID'] . "</label>
 		</div>";	
 	}
-
 ?>
 
     <div>
@@ -80,14 +79,15 @@
                     <div>
                         <h3>Apagar um Livro<h3>
                     </div>
-                     
-                    <form action="delete.php" method="post">
+                </div> 
+                <div>      
+                    <form action="aoagaritem.php" method="post">
                       <input type="hidden" name="id" value="<?php echo $id;?>"/>
                       <p color=red>Tem certeza que deseja apagar o Livro ?</p>
                       <div class="form-actions">
                           <button type="submit">Sim</button>
                           <a href="grid.php">Não - Voltar para o Grid</a>
-                        </div>
+                      </div>
                     </form>
                 </div>
                  
