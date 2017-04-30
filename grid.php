@@ -17,7 +17,7 @@
                    include 'conecta.php';
                    $conexao = Conecta::abrir();
                    echo '<tr><td colspan=2>Conectou ...</td></tr>';
-                   $sql = 'SELECT * FROM meuslivros ORDER BY id DESC';
+                   $sql = 'SELECT id,nome FROM meuslivros';
                    foreach ($conexao->query($sql) as $row) {
                           	echo $row['ID']; 
                             echo '<tr>';
