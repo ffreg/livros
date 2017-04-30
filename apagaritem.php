@@ -72,25 +72,5 @@
 		</div>";	
 	}
 ?>
-
-    <div>
-     
-                <div>
-                    <div>
-                        <h3>Apagar um Livro<h3>
-                    </div>
-                </div> 
-                <div>      
-                    <form action="aoagaritem.php" method="post">
-                      <input type="hidden" name="id" value="<?php echo $id;?>"/>
-                      <p color=red>Tem certeza que deseja apagar o Livro ?</p>
-                      <div class="form-actions">
-                          <button type="submit">Sim</button>
-                          <a href="grid.php">Não - Voltar para o Grid</a>
-                      </div>
-                    </form>
-                </div>
-                 
-    </div>
   </body>
 </html>
