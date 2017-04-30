@@ -19,8 +19,8 @@
          
         // insert data
         if ($valid) {
-            $pdo = Conecta::abrir();
             try {
+                $pdo = Conecta::abrir();
             	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             	$sql = "INSERT INTO meuslivros (NOME) values (?)";
             	$q = $pdo->prepare($sql);
@@ -31,8 +31,7 @@
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
         	}
-            echo "<script type='text/javascript'>alert('submitted successfully!')</script>";
-            header("Location: grid.php");
+            header("Location: status.php");
         }
     }
 ?>
