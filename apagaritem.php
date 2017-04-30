@@ -11,19 +11,19 @@
         $id = $_POST['id'];
          
         // Apaga o registro
-        try {
-        	$conexao = Conecta::abrir();
-        	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
-        	$sql = "DELETE FROM customers  WHERE id = ?";
-        	$query = $conexao->prepare($sql);
-        	$query->execute(array($id));
-        	Conecta::fechar();
-		}  catch(PDOException $e) {
+//        try {
+//        	$conexao = Conecta::abrir();
+//        	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
+//        	$sql = "DELETE FROM customers  WHERE id = ?";
+//        	$query = $conexao->prepare($sql);
+//        	$query->execute(array($id));
+//        	Conecta::fechar();
+//		}  catch(PDOException $e) {
 				// Se ocorrer erro, apresentar e parar a app 
-				die($e->getMessage()); 
-        }
-		header("Location: grid.php");  
-    } else { 
+//				die($e->getMessage()); 
+//        }
+//		header("Location: grid.php");  
+//    } else { 
     	// Ler os dados do livro para apresentar ao usuario antes da acao
     	try { 
     		$conexao = Conecta::abrir();
