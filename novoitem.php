@@ -26,6 +26,7 @@
             	$q = $pdo->prepare($sql);
             	$q->execute(array($name));
             	Conecta::fechar();
+            }
             catch(PDOException $e) {
 				// Se ocorrer erro, apresentar e parar a app 
 				die($e->getMessage()); 
