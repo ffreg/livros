@@ -20,11 +20,11 @@
         // insert data
         if ($valid) {
             try {
-                $pdo = Conecta::abrir();
-            	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $conexao = Conecta::abrir();
+            	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             	$sql = "INSERT INTO meuslivros (NOME) values (?)";
-            	$q = $pdo->prepare($sql);
-            	$q->execute(array($name));
+            	$query = $pdo->prepare($sql);
+            	$query->execute(array($name));
             	Conecta::fechar();
             }
             catch(PDOException $e) {
