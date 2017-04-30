@@ -16,12 +16,13 @@
                   <?php
                    include 'conecta.php';
                    $conexao = Conecta::abrir();
-                   echo '<tr><td colspan=2>Conectou ...</td></tr>';
-                   $sql = 'SELECT id,nome FROM meuslivros';
-                   foreach ($conexao->query($sql) as $row) {
-                          	echo $row['ID']; 
+                   $query = $conexao->prepare("SELECT ID,NOME FROM meuslivros");
+                   $query->execute();
+                   
+                   // $sql = 'SELECT id,nome FROM meuslivros';
+                   for($i; $row = $query->fetch(); $i++){ {
                             echo '<tr>';
-                            echo '<td>' . $row[ID] . '</td>';
+                            echo '<td>' . $i . "-" . $row[ID] . '</td>';
                             echo '<td>' . $row[NOME] . '</td>';
                             echo '</tr>';
                    }
@@ -31,3 +32,14 @@
         </div>
     </body>
 </html> 
+
+
+$query = $pdo->prepare("select name FROM tbl_name");
+      $query->execute();
+      
+      for($i=0; $row = $query->fetch(); $i++){
+        echo $i." - ".$row['name']."<br/>";
+      }
+
+      unset($pdo); 
+      unset($query);
