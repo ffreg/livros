@@ -20,11 +20,16 @@
         // insert data
         if ($valid) {
             $pdo = Conecta::abrir();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO novolivro (NOME) values (?)";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($name));
-            Conecta::fechar();
+            try {
+            	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            	$sql = "INSERT INTO novolivro (NOME) values (?)";
+            	$q = $pdo->prepare($sql);
+            	$q->execute(array($name));
+            	Conecta::fechar();
+            catch(PDOException $e) {
+				// Se ocorrer erro, apresentar e parar a app 
+				die($e->getMessage()); 
+        	}
             // echo "Gravado..." . $name
             // header("Location: grid.php");
         }
