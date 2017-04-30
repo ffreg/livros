@@ -8,7 +8,7 @@
                 <h3>Grid - Meus Livros</h3>
             </div>
             <div>
-                <table border=1 >
+                <table border=1 width="50%">
                     <tr>
                       <td>ID</td>
                       <td>Nome do Livro</td>
@@ -20,7 +20,7 @@
                    $query->execute();
                    for($i=0; $row = $query->fetch(); $i++){
                             echo '<tr>';
-                            echo '<td>' . $i . "-" . $row[ID] . '</td>';
+                            echo '<td>' . $row[ID] . '</td>';
                             echo '<td>' . $row[NOME] . '</td>';
                             echo '</tr>';
                    }
@@ -31,13 +31,3 @@
     </body>
 </html> 
 
-
-$query = $pdo->prepare("select name FROM tbl_name");
-      $query->execute();
-      
-      for($i=0; $row = $query->fetch(); $i++){
-        echo $i." - ".$row['name']."<br/>";
-      }
-
-      unset($pdo); 
-      unset($query);
