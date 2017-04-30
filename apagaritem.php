@@ -64,7 +64,7 @@
             </div>
         </div> 
     	<div>      
-            <form action="aoagaritem.php" method="post">
+            <form action="apagaritem.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $id;?>"/>
                 <p style="color:red;">Tem certeza que deseja apagar o Livro <?php echo "'". $dados['NOME'] . "' - ID: " . $dados['ID']   ?> ?</p>
                 <div class="form-actions">
