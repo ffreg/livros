@@ -3,6 +3,39 @@
 <head>
     <meta charset="utf-8">
 </head>
+
+<?php
+     
+    require 'conecta.php';
+ 
+    if ( !empty($_POST)) {
+        // keep track validation errors
+        $nameError = null;
+         
+        // keep track post values
+        $name = $_POST['nome'];
+         
+        // validate input
+        $valid = true;
+        if (empty($name)) {
+            $nameError = 'Por favor, entre com o Nome';
+            $valid = false;
+        }
+         
+        // insert data
+        if ($valid) {
+            $pdo = Conecta::abrir();
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "INSERT INTO novolivro (NOME) values(?)";
+            $q = $pdo->prepare($sql);
+            $q->execute(array($name));
+            Conecta:fechar();
+            header("Location: grid.php");
+        }
+    }
+?>
+
+
 <body>
     <div>
 		<div>
