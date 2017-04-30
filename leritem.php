@@ -33,9 +33,9 @@
 <body>
 <?php 
 	echo "Status ....: " . count($dados);
-	// if (!$status) { 
-	// 	echo "Livro não encontrado ! - Verificar parametro e acesso !"; 
-	// }
+	if ( count($dados) == 1 )  { 
+		echo "Livro não encontrado ! - Verificar parametro e acesso !"; 
+	}
 
 ?>
 	<div> 
