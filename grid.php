@@ -24,7 +24,7 @@
                   <?php
                    include 'conecta.php';
                    $conexao = Conecta::abrir();
-                   $query = $conexao->prepare("SELECT ID,NOME FROM meuslivros");
+                   $query = $conexao->prepare("SELECT ID,NOME FROM meuslivros ORDER BY NOME");
                    $query->execute();
                    for($i=0; $row = $query->fetch(); $i++){
                             echo '<tr>';

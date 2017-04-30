@@ -6,11 +6,11 @@
 <body>
 	<div> 
 		<?php
-			echo "Novo livro " . $_GET['nome'] . "foi gravado com sucesso!";
+			echo "Novo livro " . $_GET['nome'] . " foi gravado com sucesso!";
 		?>
 	</div
 	<div> 	
-		<a href="grid.php">Voltar</a> 
+		<a href="grid.php">Voltar para o Grid</a> 
 	</div>  
 </body>
 <html> 
