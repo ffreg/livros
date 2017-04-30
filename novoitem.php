@@ -1,5 +1,5 @@
 <?php
-     
+    // Classe de conexao ao DB
     require 'conecta.php';
  
     // Se for um post do formulario vamos tratar 
@@ -25,14 +25,14 @@
             $q = $pdo->prepare($sql);
             $q->execute(array($name));
             Conecta::fechar();
-            echo "Gravado..." . $name
+            // echo "Gravado..." . $name
             // header("Location: grid.php");
         }
     }
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="utf-8">
 </head>

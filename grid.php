@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt">
 <html>
 	<head>
 		<title>Grid</title> 
@@ -5,7 +7,7 @@
 	<body>	
 	   <div>
             <div >
-                <h3>Grid - Meus Livros</h3>
+                <h3>Grid dos Meus Livros</h3>
             </div>
             <div>
             	<p>

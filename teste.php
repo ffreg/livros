@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt">
 <html>
 	<head>
 		<title>Teste do PHP no Azure</title> 
