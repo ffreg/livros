@@ -50,8 +50,7 @@
 <body>
 
 <?php 
-	echo "Passei aqui ... "; 
-	echo "Qtde Registros....: " . count($dados);  
+	echo "Qtde Registros....: " . count($dados) . "<\br>";  
 	if ( count($dados) == 1 )  { 
 		// Caso o usuario altera o parametro de chamada URL para algo invalido  
 		// exemplo: ?id=090990989
