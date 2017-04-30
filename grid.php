@@ -15,7 +15,7 @@
                     </tr>
                   <?php
                    include 'conecta.php';
-                   $pdo = Conecta::abre();
+                   $pdo = Conecta::abrir();
                    $sql = 'SELECT * FROM meuslivros ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
@@ -23,7 +23,7 @@
                             echo '<td>'. $row['Nome'] . '</td>';
                             echo '</tr>';
                    }
-                   Conecta::fecha();
+                   Conecta::fechar();
                   ?>
             </table>
         </div>
