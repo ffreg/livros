@@ -3,7 +3,7 @@ class Conecta
 {
 	// Dados da conexao - propriedades da classe
     private static $dbNome = 'livrosdb' ;
-    private static $dbServidor = 'tcp:meuslivros.database.windows.net,1433' ;
+    private static $dbServidor = 'tcp:meuslivros.database.windows.net,1433';
     private static $dbUsuario = 'ffreg@meuslivros.database.windows.net';
     private static $dbSenha = 'Sistema53!';
      
@@ -21,7 +21,7 @@ class Conecta
        {     
         try
         {
-          self::$cont =  new PDO( "mysql:host=".self::$dbServidor.";"."dbname=".self::$dbNome, self::$dbUsuario, self::$dbSenha); 
+          self::$cont =  new PDO( "sqlsrv::host=".self::$dbServidor.";"."dbname=".self::$dbNome, self::$dbUsuario, self::$dbSenha); 
         }
         catch(PDOException $e)
         {
