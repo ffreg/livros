@@ -2,14 +2,15 @@
      
     require 'conecta.php';
  
+    // Se for um post do formulario vamos tratar 
     if ( !empty($_POST)) {
-        // keep track validation errors
+        // variavel para tratar os erros
         $nameError = null;
          
-        // keep track post values
+        // obtem o campo de entrada Nome e atribuii para variavel
         $name = $_POST['nome'];
          
-        // validate input
+        // Valida a entrada
         $valid = true;
         if (empty($name)) {
             $nameError = 'Por favor, entre com o Nome';
@@ -24,7 +25,8 @@
             $q = $pdo->prepare($sql);
             $q->execute(array($name));
             Conecta::fechar();
-            header("Location: grid.php");
+            echo "Gravado..." . $name
+            // header("Location: grid.php");
         }
     }
 ?>
