@@ -32,26 +32,20 @@
  
 <body>
     <div>
-     
-                <div>
-                    <div>
-                        <h3>Detalhes do Livro</h3>
-                    </div>
-                     
-                    <div>
-                      <div>
-                        <label>Name</label>
-                        <div>
-                            <label>
-                                <?php echo $data['nome'];?>
-                            </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                        <a href="grid.php">Back</a>
-                    </div> 
-                </div>       
+    	<div>
+    		<div>
+    			<h3>Detalhes do Livro</h3>
+    		</div>
+    		<div>
+    			<div>
+    				<label>Name</label>
+    			</div>
+    			<div>
+    				<label><?php echo $data['nome'];?></label>
+    			</div>
+            </div>
+        </div>
+        <div><a href="grid.php">Back</a></div> 
     </div>
   </body>
 </html>
