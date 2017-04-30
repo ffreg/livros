@@ -22,9 +22,11 @@
             try {
                 $conexao = Conecta::abrir();
             	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            	$conexao->beginTransaction();
             	$sql = "INSERT INTO meuslivros (NOME) values (?)";
             	$query = $conexao->prepare($sql);
             	$query->execute(array($name));
+            	$conexao->commit(); 
             	Conecta::fechar();
             } catch(PDOException $e) {
 				// Se ocorrer erro, apresentar e parar a app 
