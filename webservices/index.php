@@ -15,7 +15,7 @@ class RedeemAPI {
     function __construct() {
     	//if ( null == $this->db ) {     
         //	try {
-        		$this->db = new PDO( "sqlsrv:Server=".this$->dbServidor.";"."Database=".this$->dbNome, this$>dbUsuario, this$->dbSenha); 
+        		$this->db = new PDO( "sqlsrv:Server=".$dbServidor.";"."Database=".$dbNome, $dbUsuario, $dbSenha); 
         		$this->db->autocommit(FALSE);
         //	} 
         //	catch(PDOException $e) {
@@ -38,7 +38,7 @@ class RedeemAPI {
         $stmt->execute();
         $stmt->bind_result($id, $nome);
         while ($stmt->fetch()) {
-            echo "$id has $nome uses remaining!";
+            echo "Passei por aqui - Debig Step 1";
         }
         $stmt->close();
     }
