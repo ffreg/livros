@@ -14,6 +14,7 @@ class RedeemAPI {
     // Metodo Construtor - Abre uma nova conexao com o DB
     // ao inves de self::$db estou utilizando $this como outra forma de acessar o objeto
     function __construct() {
+    	echo "Constroe ...";
     
     	//if ( null == self::$cont ) {     
     	//    try {
@@ -31,6 +32,7 @@ class RedeemAPI {
 
     // Destructor - close DB connection
     function __destruct() {
+    	echo "Deconstroe..."; 
        // $this->db->close();
     }
 
