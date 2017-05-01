@@ -13,18 +13,20 @@ class RedeemAPI {
     // Metodo Construtor - Abre uma nova conexao com o DB
     // ao inves de self::$db estou utilizando $this como outra forma de acessar o objeto
     function __construct() {
-    	//if ( null == $this->db ) {     
-        //	try {
-        		$this->db = new PDO( "sqlsrv:Server=".$dbServidor.";"."Database=".$dbNome, $dbUsuario, $dbSenha); 
-        		$this->db->autocommit(FALSE);
-        //	} 
-        //	catch(PDOException $e) {
-          		// Se ocorrer erro de conexão, apresentar e parar a app 
-         // 		die($e->getMessage()); 
-         // 	}
-        }
-
+    
+    	if ( null == self::$cont ) {     
+    	    try {
+        	  self::$cont =  new PDO( "sqlsrv:Server=".self::$dbServidor.";"."Database=".self::$dbNome, self::$dbUsuario, self::$dbSenha); 
+          	// se fosse uma conexao com o MySQL a string de conexao seria: mysql:host ao inves de sqlsrv:Server= | dbname= as inves de Database="
+       		}
+        	catch(PDOException $e) {
+          	// Se ocorrer erro de conexão, apresentar e parar a app 
+          	die($e->getMessage()); 
+        	}
+       	}
+       return self::$cont;
     }
+ 
 
     // Destructor - close DB connection
     function __destruct() {
