@@ -15,23 +15,23 @@ class RedeemAPI {
     // ao inves de self::$db estou utilizando $this como outra forma de acessar o objeto
     function __construct() {
     
-    	if ( null == self::$cont ) {     
-    	    try {
-        	  self::$cont =  new PDO( "sqlsrv:Server=tcp:meuslivros.database.windows.net,1433";"."Database=livrosdb", self::$dbUsuario, self::$dbSenha); 
+    	//if ( null == self::$cont ) {     
+    	//    try {
+        //	  self::$cont =  new PDO( "sqlsrv:Server=tcp:meuslivros.database.windows.net,1433";"."Database=livrosdb", self::$dbUsuario, self::$dbSenha); 
           	// se fosse uma conexao com o MySQL a string de conexao seria: mysql:host ao inves de sqlsrv:Server= | dbname= as inves de Database="
-       		}
-        	catch(PDOException $e) {
+       	//	}
+        //	catch(PDOException $e) {
           	// Se ocorrer erro de conexão, apresentar e parar a app 
-          	die($e->getMessage()); 
-        	}
-       	}
-       return self::$cont;
+         // 	die($e->getMessage()); 
+        //	}
+       	//}
+       //return self::$cont;
     }
  
 
     // Destructor - close DB connection
     function __destruct() {
-        $this->db->close();
+       // $this->db->close();
     }
 
     // Main method to redeem a code
