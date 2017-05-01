@@ -7,14 +7,17 @@ class RedeemAPI {
     
     // Dados da conexao - propriedades da classe
     private static $dbNome = 'livrosdb' ;
-    private static $dbServidor = '';
+    private static $dbServidor = 'tcp:meuslivros.database.windows.net,1433';
     private static $dbUsuario = 'ffreg@meuslivros.database.windows.net';
     private static $dbSenha = 'Sistema53!';
     
     // Metodo Construtor - Abre uma nova conexao com o DB
     // ao inves de self::$db estou utilizando $this como outra forma de acessar o objeto
     function __construct() {
-    	echo "Constroe ...";
+    	private $teste; 
+    	
+    	$teste = 15;
+    	echo "Constroe ..." . $teste;
     
     	//if ( null == self::$cont ) {     
     	//    try {
@@ -48,8 +51,8 @@ class RedeemAPI {
         //while ($stmt->fetch()) {
         //    echo "Passei por aqui - Debug Step 1";
         }
-        $stmt->close();
-    }
+       //  $stmt->close();
+    // }
 }
 
 $api = new RedeemAPI;
