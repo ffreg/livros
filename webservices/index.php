@@ -3,7 +3,8 @@
 class RedeemAPI {
 
     private $db;
-
+    private $cont; 
+    
     // Dados da conexao - propriedades da classe
     private static $dbNome = 'livrosdb' ;
     private static $dbServidor = 'tcp:meuslivros.database.windows.net,1433';
